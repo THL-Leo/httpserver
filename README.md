@@ -1,3 +1,4 @@
+> :warning: **This Project is a modified school project** and thus no students of CSE 130 should be looking at my source code.
 # Assignment 4 - Atomicity and Coherency
 
 This C program creates an HTTP server and it runs forever. Client can communicate with the server using a specific port that the server opened. It will run until the user types ctrl-C. The server should be able to handle GET, PUT, and APPEND requests. This also adds an additional feature where you can create a log file to keep track of reuqest ids, status code, and method type. This server can also now handle multiple threads to handle multiple requests at the same time. This server now supports atomicity and coherency to ensure the right output.
@@ -34,3 +35,4 @@ I implemented a mutex lock for logging the files and using flock with special pe
 
 ## Errors encountered
 1. I fixed a bug where I would check if a file is invalid before reading in the headers. This way it will update the request ID before exiting out of the function.
+2. Another error is that it busy waits and cannot handle incomplete requests.
